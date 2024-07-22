@@ -29,7 +29,7 @@ function SearchPage() {
     return (
         <section className="bg-[#212124] min-h-screen">
             <Navbar />
-            <h1 className='josefin-sans-bold text-lg text-white items-center justify-center flex'>Search Page</h1>
+            <h1 className='josefin-sans-bold text-lg text-white items-center justify-center flex'>Search Page here</h1>
             <div className='input-wrapper flex justify-center items-center'>
                 <input
                     type="text"
