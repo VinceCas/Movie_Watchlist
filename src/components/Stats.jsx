@@ -6,12 +6,12 @@ import StatBox4 from './StatBox4';
 
 const Stats = () => {
   return (
-    <section className='justify-center md:ml-[60px]' >
+    <section className='flex justify-center'>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-10 py-20 mx-5'>
-      <StatBox />
-      <StatBox2 />
-      <StatBox3 />
-      <StatBox4 />
+        <StatBox />
+        <StatBox2 />
+        <StatBox3 />
+        <StatBox4 />
       </div>
     </section>
   );
