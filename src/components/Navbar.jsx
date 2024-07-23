@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <nav className="flex justify-between items-center w-[92%] mx-[10px] pt-2">
       <div className="flex items-center md:ml-24 z-50">
-        <img src={logo} className="mx-[3px] fade-up h-[50px] w-[50px]" alt="Logo" />
+        <img src={logo} className="mx-[3px] fade-up h-[30px] w-[30px]" alt="Logo" />
         <h1 className="josefin-sans-bold text-white items-baseline fade-up md:text-[20px] text-[30px] pt-[5px]">WatchBuddy</h1>
       </div>
       <div
@@ -28,8 +28,8 @@ const Navbar = () => {
           <li className="transition-transform transform hover:scale-[105%]">
             <Link to="/watched">Watched</Link>
           </li>
-          <li className="transition-transform transform hover:scale-[105%]">
-            <Link to="/search">Search</Link>
+          <li className="transition-transform transform hover:scale-[105%] md:bg-[#FF8D1B] md:px-[18px] md:py-[3px] md:rounded-full">
+            <Link to="/search">+Add</Link>
           </li>
         </ul>
       </div>

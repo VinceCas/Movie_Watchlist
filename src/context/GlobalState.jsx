@@ -20,10 +20,30 @@ export const GlobalProvider = (props) => {
         localStorage.setItem('watched', JSON.stringify(state.watched))
     },[state])
 
-    // Actions (add to watchlist or watched page)
+    //Function (add a movie to watchlist or watched page)
     const addMovieToWatchlist = (movie) => {
         dispatch({ type: "ADD_MOVIE_TO_WATCHLIST", payload: movie });
     };
+
+    //Function (remove a movie from watchlist)
+    const removeMovieFromWatchlist = (id) => {
+        dispatch({type: "REMOVE_MOVIE_TO_WATCHLIST", payload: id})
+    }
+
+    //Function (add a movie to watched from the watchlist)
+    const addMovieToWatched = (movie) => {
+        dispatch({ type: "ADD_MOVIE_TO_WATCHED", payload: movie})
+    }
+
+    //Function (remove a movie from watched going back to watchlist)
+    const moveToWatchList = (movie) => {
+        dispatch({ type: "MOVE_BACK_TO_WATCHLIST", payload: movie})
+    }
+
+    //Function (remove a movie from watched)
+    const removeMovieFromWatched = (id) => {
+        dispatch({ type: "REMOVE_MOVIE_TO_WATCHED", payload: id})
+    }
 
     return (
         <GlobalContext.Provider 
@@ -31,6 +51,10 @@ export const GlobalProvider = (props) => {
                 watchlist: state.watchlist,
                 watched: state.watched,
                 addMovieToWatchlist,
+                removeMovieFromWatchlist,
+                addMovieToWatched,
+                moveToWatchList,
+                removeMovieFromWatched,
             }}>
             {props.children}
         </GlobalContext.Provider>
