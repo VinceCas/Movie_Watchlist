@@ -6,6 +6,7 @@ import logo from './logo.png'
 import view from './view.png'
 import cancel from './cancel.png'
 import hidden from './hidden.png'
+import movie from './movie.png'
 
 export {
     menulogo,
@@ -16,5 +17,6 @@ export {
     view,
     cancel,
     hidden,
+    movie,
 
 }

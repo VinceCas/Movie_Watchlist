@@ -6,7 +6,7 @@ import StatBox4 from './StatBox4';
 
 const Stats = () => {
   return (
-    <section className='flex justify-center'>
+    <section className='flex justify-center fade-delay'>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-10 py-20 mx-5'>
         <StatBox />
         <StatBox2 />

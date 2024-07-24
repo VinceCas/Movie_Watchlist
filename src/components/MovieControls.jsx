@@ -7,7 +7,7 @@ export const MovieControls = ({ movie, type }) => {
     useContext(GlobalContext);
 
   return (
-    <div className="inner-card-controls flex items-center justify-center">
+    <div className="inner-card-controls flex items-center justify-center ">
       {type === "watchlist" && (
         <>
           <div className=" flex flex-row justify-center items-center gap-4 ">
