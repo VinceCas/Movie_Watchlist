@@ -11,10 +11,12 @@ const Navbar = () => {
 
   return (
     <nav className="flex justify-between items-center w-[92%] mx-[10px] pt-2">
+      <Link to="/">
       <div className="flex items-center md:ml-24 z-50">
         <img src={logo} className="mx-[3px] fade-up h-[30px] w-[30px]" alt="Logo" />
         <h1 className="josefin-sans-bold text-white items-baseline fade-up md:text-[20px] text-[30px] pt-[5px]">WatchBuddy</h1>
       </div>
+      </Link>
       <div
         className={`absolute md:static bg-[#212124] z-10 ${isMenuOpen ? 'top-12 py-10 fade-down box-shadow' : 'fade-up top-[-100%]'} md:min-h-fit left-0 w-full md:w-auto flex md:items-center md:gap-[24px] gap-5 flex-col md:flex-row md:px-5 px-10`}
       >

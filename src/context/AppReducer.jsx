@@ -18,26 +18,36 @@ const AppReducer = (state, action) => {
       return {
         ...state,
         watchlist: state.watchlist.filter(
-            (movie) => movie.id !== action.payload.id
-          ),   
+          (movie) => movie.id !== action.payload.id
+        ),
         watched: [action.payload, ...state.watched],
       };
 
-      case "MOVE_BACK_TO_WATCHLIST":
+    case "MOVE_BACK_TO_WATCHLIST":
       return {
         ...state,
         watched: state.watched.filter(
-            (movie) => movie.id !== action.payload.id
+          (movie) => movie.id !== action.payload.id
         ),
-        watchlist: [action.payload, ...state.watchlist]
+        watchlist: [action.payload, ...state.watchlist],
       };
 
-      case "REMOVE_MOVIE_TO_WATCHED":
+    case "REMOVE_MOVIE_FROM_WATCHED":
       return {
         ...state,
-        watched: state.watched.filter(
-          (movie) => movie.id !== action.payload
-        ),
+        watched: state.watched.filter((movie) => movie.id !== action.payload),
+      };
+
+    case "SET_WATCHLIST":
+      return {
+        ...state,
+        watchlist: action.payload,
+      };
+
+    case "SET_WATCHED":
+      return {
+        ...state,
+        watched: action.payload,
       };
 
     default:
